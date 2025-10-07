@@ -21,8 +21,8 @@ class StudentController extends Controller
 
         $request->validate([
             'name' => 'required|min:3|max:50',
-            'email' => 'required|email|max:80',
-            'phone_number' => 'required|max:25',
+            'email' => 'required|email|max:80|unique:students',
+            'phone_number' => 'required|max:25|unique:students',
             'college_address_id' => 'required',
             'comment' => 'required|max:1000',
         ]);
