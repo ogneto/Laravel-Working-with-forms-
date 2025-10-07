@@ -23,7 +23,7 @@ class StudentController extends Controller
             'name' => 'required|min:3|max:50',
             'email' => 'required|email|max:80',
             'phone_number' => 'required|max:25',
-            'college_address' => 'required',
+            'college_address_id' => 'required',
             'comment' => 'required|max:1000',
         ]);
 
@@ -31,7 +31,7 @@ class StudentController extends Controller
         $student->name = $request->input('name');
         $student->email = $request->input('email');
         $student->phone_number = $request->input('phone_number');
-        $student->college_address = $request->input('college_address');
+        $student->college_address_id = $request->input('college_address_id');
         $student->comment = $request->input('comment');
 
         $student->save();

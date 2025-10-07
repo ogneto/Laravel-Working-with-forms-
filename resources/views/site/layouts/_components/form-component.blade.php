@@ -24,21 +24,12 @@
 
     <p> Where will the student study?</p>
 
-    <select name='college_address'>
+    <select name='college_address_id'>
         <option value=''>Select here is the college address:</option>
         @foreach ($addresses as $address )
-            <option value='{{ $address->id }}' {{ (old('college_address') == $address->id) ? 'selected' : '' }}>{{ $address->address }}</option>
+            <option value='{{ $address->id }}' {{ (old('college_address_id') == $address->id) ? 'selected' : '' }}>{{ $address->address }}</option>
         @endforeach
     </select>
-
-    {{-- 
-        Another form to do this:
-        <select name='college_address'>
-        <option value=''>Select here the college addres:</option>
-        <option value='1' {{ (old('college_address') == '1') ? 'selected' : '' }}>Asa Norte</option>
-        <option value='2' {{ (old('college_address') == '2') ? 'selected' : '' }}>Asa Sul</option>
-        <option value='3' {{ (old('college_address') == '3') ? 'selected' : '' }}>Sudoeste</option>
-    </select> --}}
 
     <p>Write some comments or additional information about the student</p>
 
