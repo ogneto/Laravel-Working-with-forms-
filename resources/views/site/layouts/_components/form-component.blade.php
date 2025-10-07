@@ -11,15 +11,15 @@
 
     @csrf
     <p> Name:
-        <input name='name' type='text' placeholder='Write the student name here...'>
+        <input name='name' type='text' value='{{ old('name') }}' placeholder='Write the student name here...'>
     </p>
 
     <p> Email:
-        <input name='email' type='text' placeholder='Write the student email here...'>
+        <input name='email' type='text' value='{{ old('email') }}' placeholder='Write the student email here...'>
     </p>
 
     <p> Phone Number:
-        <input name='phone_number' type='text' placeholder='Write the student phone number here...'>
+        <input name='phone_number' type='text' value='{{ old('phone_number') }}' placeholder='Write the student phone number here...'>
     </p>
 
     <p> Where will the student study?</p>
@@ -31,7 +31,10 @@
     </select>
 
     <p>Write some comments or additional information about the student</p>
-    <textarea name='comment'></textarea>
+
+    <textarea name='comment'>{{ (old('comment') != '') ? old('comment') : '' }}</textarea>
+
+    {{-- <textarea name='comment'></textarea> --}}
     <br>
 
     <button type='submit'>SEND YOUR ANSWERS HERE</button>
