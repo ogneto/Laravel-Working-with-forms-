@@ -1,5 +1,12 @@
 {{ $slot }}
 
+@if ($errors->any())
+
+    {{ print_r($errors) }}
+    
+@endif
+
+
 <form action='{{ route('form') }}' method='post'>
 
     @csrf

@@ -13,7 +13,14 @@ class StudentController extends Controller
     }
 
     public function FormPost(Request $request) {
-        //Student::create($request->all());
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone_number' => 'required',
+            'college_address' => 'required',
+            'comment' => 'required',
+        ]);
 
         $student = new Student;
         $student->name = $request->input('name');
