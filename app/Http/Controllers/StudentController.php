@@ -13,7 +13,17 @@ class StudentController extends Controller
     }
 
     public function FormPost(Request $request) {
-        Student::create($request->all());
+        //Student::create($request->all());
+
+        $student = new Student;
+        $student->name = $request->input('name');
+        $student->email = $request->input('email');
+        $student->phone_number = $request->input('phone_number');
+        $student->college_address = $request->input('college_address');
+        $student->comment = $request->input('comment');
+
+        $student->save();
+
         return view('site.form-ok', ['request' => $request]);
     }
 }

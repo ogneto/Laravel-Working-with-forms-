@@ -24,7 +24,7 @@
     </select>
 
     <p>Write some comments or additional information about the student</p>
-    <textarea name='comments'></textarea>
+    <textarea name='comment'></textarea>
     <br>
 
     <button type='submit'>SEND YOUR ANSWERS HERE</button>
