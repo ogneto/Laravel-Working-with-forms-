@@ -5,7 +5,7 @@
 
     <p> You can create a student register here! </p>
 
-    @component('site.layouts._components.form-component')
+    @component('site.layouts._components.form-component', ['addresses' => $addresses])
 
         <p> Welcome to our form: </p>
 

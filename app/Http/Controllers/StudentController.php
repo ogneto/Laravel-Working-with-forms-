@@ -9,7 +9,14 @@ class StudentController extends Controller
 {
     //
     public function FormGet() {
-        return view('site.form');
+
+        $addresses = [
+            "1" => 'Asa Norte',
+            "2" => 'Asa Sul',
+            "3" => 'Sudoeste'
+        ];
+
+        return view('site.form', ['addresses' => $addresses]);
     }
 
     public function FormPost(Request $request) {
