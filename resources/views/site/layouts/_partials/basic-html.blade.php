@@ -9,6 +9,7 @@
 
     <h1>Welcome to my APP!</h1>
     <p> Let's learn Laravel together! </p>
+    <hr>
     
     @yield('content')
 

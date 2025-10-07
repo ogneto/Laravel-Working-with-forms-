@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('email', 80);
             $table->string('phone_number', 25);
             $table->integer('college_address');
-            $table->string('comments', 1000)->default('No comments yet.');
+            $table->string('comment', 1000)->default('No comments yet.');
             $table->timestamps();
         });
     }

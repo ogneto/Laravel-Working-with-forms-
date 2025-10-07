@@ -16,7 +16,7 @@
     </p>
 
     <p> Where will the student study?</p>
-    <select>
+    <select name='college_address'>
         <option value=''>Select here the college addres:</option>
         <option value='1'>Asa Norte</option>
         <option value='2'>Asa Sul</option>
