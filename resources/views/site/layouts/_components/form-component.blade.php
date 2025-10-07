@@ -26,8 +26,8 @@
 
     <select name='college_address'>
         <option value=''>Select here is the college address:</option>
-        @foreach ($addresses as $key => $address )
-            <option value='{{ $key }}' {{ (old('college_address') == $key) ? 'selected' : '' }}>{{ $address }}</option>
+        @foreach ($addresses as $address )
+            <option value='{{ $address->id }}' {{ (old('college_address') == $address->id) ? 'selected' : '' }}>{{ $address->address }}</option>
         @endforeach
     </select>
 

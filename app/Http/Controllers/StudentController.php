@@ -4,17 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use App\Address;
+
 
 class StudentController extends Controller
 {
     //
     public function FormGet() {
 
-        $addresses = [
-            "1" => 'Asa Norte',
-            "2" => 'Asa Sul',
-            "3" => 'Sudoeste'
-        ];
+        $addresses = Address::all();
 
         return view('site.form', ['addresses' => $addresses]);
     }

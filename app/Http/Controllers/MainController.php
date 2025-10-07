@@ -3,17 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Address;
 
 class MainController extends Controller
 {
     //
     public function MainPage() {
 
-        $addresses = [
-            "1" => 'Asa Norte',
-            "2" => 'Asa Sul',
-            "3" => 'Sudoeste'
-        ];
+        $addresses = Address::all();
 
         return view('site.main', ['addresses' => $addresses]);
     }
