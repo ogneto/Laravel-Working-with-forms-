@@ -25,9 +25,9 @@
     <p> Where will the student study?</p>
     <select name='college_address'>
         <option value=''>Select here the college addres:</option>
-        <option value='1'>Asa Norte</option>
-        <option value='2'>Asa Sul</option>
-        <option value='3'>Sudoeste</option>
+        <option value='1' {{ (old('college_address') == '1') ? 'selected' : '' }}>Asa Norte</option>
+        <option value='2' {{ (old('college_address') == '2') ? 'selected' : '' }}>Asa Sul</option>
+        <option value='3' {{ (old('college_address') == '3') ? 'selected' : '' }}>Sudoeste</option>
     </select>
 
     <p>Write some comments or additional information about the student</p>
