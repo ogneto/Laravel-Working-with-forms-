@@ -20,7 +20,7 @@
         <option value=''>Select here the college addres:</option>
         <option value='1'>Asa Norte</option>
         <option value='2'>Asa Sul</option>
-        <option value='1'>Sudoeste</option>
+        <option value='3'>Sudoeste</option>
     </select>
 
     <p>Write some comments or additional information about the student</p>

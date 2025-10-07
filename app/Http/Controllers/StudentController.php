@@ -14,5 +14,6 @@ class StudentController extends Controller
 
     public function FormPost(Request $request) {
         Student::create($request->all());
+        return view('site.form-ok', ['request' => $request]);
     }
 }
