@@ -15,11 +15,11 @@ class StudentController extends Controller
     public function FormPost(Request $request) {
 
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone_number' => 'required',
+            'name' => 'required|min:3|max:50',
+            'email' => 'required|email|max:80',
+            'phone_number' => 'required|max:25',
             'college_address' => 'required',
-            'comment' => 'required',
+            'comment' => 'required|max:1000',
         ]);
 
         $student = new Student;
