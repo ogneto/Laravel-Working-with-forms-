@@ -30,7 +30,7 @@ class StudentController extends Controller
         $messages = [
             'required' => "The field :attribute is required! Please try again!",
             'email.email' => "Sorry. You didn't write a valid email. Please try again!",
-            'comment.max' => "Sorry, the comments can't obe bigger than 1000 "
+            'comment.max' => "Sorry, the comments can't be bigger than 1000 "
         ];
 
         $request->validate($rules, $messages);
