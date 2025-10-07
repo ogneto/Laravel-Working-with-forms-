@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('student_registration', 'StudentController@FormGet')->name('form');
 Route::post('student_registration', 'StudentController@FormPost')->name('form');
+
+Route::get('/', 'MainController@MainPage')->name('main');
 
