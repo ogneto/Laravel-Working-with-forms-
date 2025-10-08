@@ -11,17 +11,17 @@
 
     @csrf
     <p> Name:
-        <input name='name' type='text' value='{{ old('name') }}' placeholder='Write the student name here...'>
+        <input name='name' type='text' value='{{ old('name') }}' placeholder="Write the student's name here...">
         {{ ($errors->has('name')) ? $errors->first('name') : '' }}
     </p>
 
     <p> Email:
-        <input name='email' type='text' value='{{ old('email') }}' placeholder='Write the student email here...'>
+        <input name='email' type='text' value='{{ old('email') }}' placeholder="Write the student's email here...">
         {{ ($errors->has('email')) ? $errors->first('email') : '' }}
     </p>
 
     <p> Phone Number:
-        <input name='phone_number' type='text' value='{{ old('phone_number') }}' placeholder='Write the student phone number here...'>
+        <input name='phone_number' type='text' value='{{ old('phone_number') }}' placeholder="Write the student's phone number here...">
         {{ ($errors->has('phone_number')) ? $errors->first('phone_number') : '' }}
     </p>
 
