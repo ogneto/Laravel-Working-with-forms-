@@ -1,3 +1,5 @@
+{{ $slot }}
+
 <form action='{{ route('form_address') }}' method='post'>
 
     @csrf
