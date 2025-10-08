@@ -20,7 +20,7 @@ class StudentController extends Controller
     public function FormPost(Request $request) {
 
         $rules = [
-            'name' => 'required|min:3|max:50',
+            'name' => 'required|min:3|max:50|unique:students',
             'email' => 'required|email|max:80|unique:students',
             'phone_number' => 'required|max:25|unique:students',
             'college_address_id' => 'required',
@@ -29,8 +29,9 @@ class StudentController extends Controller
 
         $messages = [
             'required' => "The field :attribute is required! Please try again!",
-            'email.email' => "Sorry. You didn't write a valid email. Please try again!",
-            'comment.max' => "Sorry, the comments can't be bigger than 1000 "
+            'email.email' => "Sorry, you didn't write a valid email. Please try again!",
+            'comment.max' => "Sorry, the comments can't be bigger than 1000 ",
+            'name.unique' => "This student already exists. Please, check the database!"
         ];
 
         $request->validate($rules, $messages);

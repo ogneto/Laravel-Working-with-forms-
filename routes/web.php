@@ -22,3 +22,5 @@ Route::post('student_registration', 'StudentController@FormPost')->name('form');
 
 Route::get('/', 'MainController@MainPage')->name('main');
 
+Route::get('/address_registration', 'AddressController@FormGet')->name('form_address');
+Route::post('/address_registration', 'AddressController@FormPost')->name('form_address');
